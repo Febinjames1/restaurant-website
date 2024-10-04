@@ -1,0 +1,905 @@
+/* universal style */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+body{
+font-family:'Arial', sans-serif;
+background-color: #f9f9f9;
+line-height: 1.6;
+
+}
+/* nAv bar styling */
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+    gap: 50px;
+    margin-top: -60px;
+   
+}
+.logo img{
+    height: 150px;
+}
+#checkbox{
+    display: none;
+}
+.icons{
+    display: none;
+    cursor: pointer;
+}
+.navbar{
+    display: flex;
+    gap: 50px;
+    flex-grow: 1;
+}
+.navbar a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.navbar a:hover{
+    color: #ffcc00 ;
+}
+.navactions{
+    margin-left: auto;
+}
+.sign-in-btn{
+    text-decoration: none;
+    color: #333;     /* BUTTON TEXT COLOR*/
+    padding: 10px 15px;
+    border: 2px solid #333;/*button border*/
+    border-radius: 5px;
+    transition: background-color 0.3,color 0.3s;
+}
+.sign-in-btn:hover{
+    background-color: #ffcc00;/*button hoverr background*/
+    color: #fff;/*button hover text color*/
+}
+/* icon arrange */
+.user{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.user i{
+    font-size: 24px;
+    cursor: pointer;
+}
+/* search bar styles */
+.search-bar{
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.search-input{
+    padding: 8px;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+.search-btn{
+    padding: 8px 12px;
+    border: none;
+    background-color: #ffcc00;/*button color*/
+    color: #fff; /*button text color*/
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.search-btn:hover{
+    background-color:#e6b800 ;/*button hover background*/
+
+}
+/* media query  for responsive design */
+@media screen and (max-width: 768px) {
+    #header{
+        flex-wrap: wrap;
+    }
+    .navbar{
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+    #checkbox:checked~.navbar{
+        display: flex;
+    }
+    .icons{
+        display: block;
+        font-size: 24px;
+    }
+    .search-bar{
+        margin-top: 10px;
+        width: 100%;
+    }
+    .search-input{
+        flex-grow: 1;
+    }
+    .navactions,.user{
+        margin-top:10px;
+    }
+    .search-bar,.user,.navactions{
+        display: none;
+    }
+}
+@media screen and (max-width: 480px){
+    .search-bar,.user,.navactions{
+        width: 100%;
+        justify-content: center;
+    }
+}
+/* food categories */
+#banner{
+    background-image: url(./images/salad-2068220_1280.jpg);
+    width: 100%;
+    height: 550px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    image-rendering: crisp-edges;
+    margin-top: -80px;
+    position: relative;
+    
+}
+.banner-content{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+text-align: center;
+color: white;
+}
+.banner-content h1{
+    font-size: 3em;
+    margin-bottom: 20px;
+    margin-left: -750px;
+}
+.banner-content p{
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    margin-left: -750px;
+}
+.menu-button{
+    background-color: #ff6b6b ;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: -750px;
+}
+.menu-button:hover{
+    background-color:  #ff8787 ;
+}
+@media (max-width: 1024px) {
+    #banner {
+        height: 450px;
+    }
+
+    .banner-content h1 {
+        font-size: 2.5em;
+        margin-left: 0;
+    }
+
+    .banner-content p {
+        font-size: 1.1em;
+        margin-left: 0;
+    }
+
+    .menu-button {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #banner {
+        height: 400px;
+    }
+
+    .banner-content h1 {
+        font-size: 2em;
+    }
+
+    .banner-content p {
+        font-size: 1em;
+    }
+
+    .menu-button {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #banner {
+        height: 350px;
+    }
+
+    .banner-content h1 {
+        font-size: 1.5em;
+    }
+
+    .banner-content p {
+        font-size: 0.9em;
+    }
+
+    .menu-button {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 360px) {
+    #banner {
+        height: 300px;
+    }
+
+    .banner-content h1 {
+        font-size: 1.2em;
+    }
+
+    .banner-content p {
+        font-size: 0.8em;
+    }
+
+    .menu-button {
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
+}
+/* rounded food list */
+.gallery-container{
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+   
+ } 
+.gallery-container::-webkit-scrollbar{
+    display: none;
+}
+.image-gallery{
+    display: inline-flex;
+    gap: 10px;
+    padding: 20px 0;
+}
+.gallery-items{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.gallery-items img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    .gallery-items {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-items {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 360px) {
+    .image-gallery {
+        gap: 5px;
+    }
+
+    .gallery-items {
+        width: 70px;
+        height: 70px;
+    }
+}
+/*   restaurant  container*/
+.restaurant-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #fff;
+}
+/* individual restaurent card */
+.restaurant-card{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width:calc(33.333% - 20px);
+    transition: tranform 0.3s ease;
+}
+.restaurant-card:hover{
+    transform: scale(1.05);
+}
+.restaurant-card img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+/* restaurant info */
+.restaurant-info{
+    padding: 15px;
+}
+.restaurant-info #book h2{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left:-150px;
+}
+.restaurant-info p{
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+/* restaurant meta */
+.restaurant-meta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+.offer{
+    color: #fc8019;
+    font-weight: bold;
+}
+.restaurant-card i{
+    color: green;
+}
+/* contact section */
+.contact-section{
+    background-color: #e6e6e6;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+.contact-section #fj h2{
+    font-size: 2.5rem;
+    margin: 1.5rem;
+}
+form{
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+label{
+    margin-bottom: 0.5rem;
+}
+.n1,textarea{
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button{
+    padding: 1rem;
+    background-color: #f0a500;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    background-color:#e68a00 ;
+}
+/*section online/offline */
+#review{
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 50px;
+    margin-left: 10px;  
+}
+#review i{
+    color: green;
+
+}
+
+.division{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 50px;
+    padding: 0 20px;
+    width: 80%;
+    margin: 3% 5%;
+    justify-content: space-between;
+    width: 89%;  
+}
+
+.online-offline{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: tranform 0.3s ease,box-shadow 0.3s ease;
+}
+.online-offline:hover{
+transform: translateY(-5px);
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.online-offline img{
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    object-position: center;
+    border-radius: 40px;
+    object-fit: cover;
+    transition: tranform 0.3s ease;
+}
+.online-offline img:hover{
+    transform: scale(1.05); 
+}
+/* food list */
+header{
+    
+    margin-bottom: 20px;
+}
+h2{
+    font-size: 2.5rem;
+   text-align: center;
+}
+
+.restaurant-info{
+    font-size: 1rem;
+    color: #666;
+    margin-top: -40px;
+    margin-left: -10px;
+   
+}
+
+.menu-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 50px;
+    padding: 0 20px;
+    width: 80%;
+    margin: 3% 5%;
+    justify-content: space-between;
+    width: 89%; 
+}
+.menu-item{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: tranform 0.3s ease,box-shadow 0.3s ease;
+}
+.menu-item:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.menu-item img{
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    object-position: center;
+    border-radius: 40px;
+    object-fit: cover;
+    transition: tranform 0.3s ease;
+}
+.menu-item img:hover img{
+    transform: scale(1.05);
+}
+.offer{
+    color: #fc8019 ;
+    font-weight: bold;
+    
+}
+.star{
+    color: green;
+   
+}
+.item-info{
+    padding: 15px;
+}
+.item-name{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.item-price{
+    color: #e44d26 ;
+    font-weight: bold;
+}
+.add-btn{
+    background-color:#4CAF50 ;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    transition: background-color 0.3s ease ,tranform 0.1s ease;
+}
+.add-btn:hover{
+    background-color:  #45a049;
+}
+.add-btn:active{
+    transform: scale(0.95);
+    transition: tranform 0.1s ease;
+}
+@media (max-width:768px){
+    .menu-grid{
+        grid-template-columns: repeat(auto-fit,minmax(200,1fr));
+    }
+}
+@media(max-width:480px){
+    h1{
+        font-size: 2rem;
+    }
+    .add-btn{
+        padding: 4px 8px;
+    }
+}
+
+
+
+    /* footer */
+    .footer {
+        background-color: #871010;
+        color: #fff;
+        padding: 60px 0 30px;
+        font-family: 'Arial', sans-serif;
+        background-image: url(./images/footer-bg.jpg);
+    }
+    
+    .footer .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .footer-columns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    
+    .footer-column {
+        flex: 1 1 250px;
+    }
+    
+    .footer-column h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #f39c12;
+    }
+    
+    .footer-column p,
+    .footer-column li,
+    .footer-column a {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: #ccc;
+        line-height: 1.6;
+    }
+    
+    .footer-column a:hover {
+        color: #f39c12;
+        text-decoration: none;
+    }
+    
+    .footer-links {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+    
+    .footer-links li a {
+        color: #ccc;
+        text-decoration: none;
+    }
+    
+    .newsletter-form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .newsletter-form input {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        font-size: 16px;
+    }
+    
+    .newsletter-form button {
+        padding: 10px;
+        background-color: #f39c12;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .newsletter-form button:hover {
+        background-color: #e67e22;
+    }
+    
+    /* Social Icons */
+    .social-icons {
+        display: flex;
+        gap: 15px;
+    }
+    
+    .social-icons a {
+        color: #fff;
+        font-size: 24px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+        color: #f39c12;
+    }
+    
+    /* Footer Bottom */
+    .footer-bottom {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 14px;
+        border-top: 1px solid #333;
+        padding-top: 20px;
+        color: #aaa;
+    }
+    
+    /* Partner Logos */
+    .partners {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 40px 0;
+    }
+    
+    .partner-logo {
+        height: 30px;
+        filter: brightness(0) invert(1);
+    }
+    
+    .footer-bottom a {
+        color: #ccc;
+        margin: 0 10px;
+    }
+    
+    .footer-bottom a:hover {
+        color: #f39c12;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .footer-columns {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .footer-column {
+            text-align: center;
+        }
+    
+        .partners {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    /* review */
+    .testimonials {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .testimonial-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    .testimonial {
+        width: 45%;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        position: relative;
+    }
+    .testimonials h1{
+        font-weight: bold;
+        font-size: xx-large;
+       font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    }
+    .testimonial img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        float: left;
+        margin-right: 15px;
+    }
+    .testimonial h3 {
+        margin: 0;
+        font-size: 18px;
+    }
+    .testimonial p {
+        font-size: 14px;
+        color: #666;
+    }
+    .quote {
+        font-size: 40px;
+        color: #ccc;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+    .nav-buttons {
+        margin-top: 20px;
+    }
+    .nav-buttons button {
+        background-color: #008080;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        margin: 0 5px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .blog {
+        text-align: center;
+    }
+    @media (max-width: 1024px) {
+        .testimonial-container {
+            gap: 10px;
+        }
+    
+        .testimonial {
+            width: 48%;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .testimonial-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .testimonial {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+    
+        .testimonial img {
+            width: 70px;
+            height: 70px;
+        }
+    
+        .testimonial h3 {
+            font-size: 16px;
+        }
+    
+        .testimonial p {
+            font-size: 13px;
+        }
+    
+        .quote {
+            font-size: 30px;
+        }
+    
+        .nav-buttons {
+            margin-top: 15px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .testimonial {
+            width: 90%;
+        }
+    
+        .testimonial img {
+            width: 60px;
+            height: 60px;
+        }
+    
+        .testimonial h3 {
+            font-size: 14px;
+        }
+    
+        .testimonial p {
+            font-size: 12px;
+        }
+    
+        .quote {
+            font-size: 25px;
+        }
+    
+        .nav-buttons button {
+            padding: 8px 10px;
+            font-size: 0.9em;
+        }
+    }
+    
+    @media (max-width: 360px) {
+        .testimonial {
+            width: 100%;
+            padding: 15px;
+        }
+    
+        .testimonial img {
+            width: 50px;
+            height: 50px;
+        }
+    
+        .testimonial h3 {
+            font-size: 12px;
+        }
+    
+        .testimonial p {
+            font-size: 11px;
+        }
+    
+        .quote {
+            font-size: 20px;
+        }
+    
+        .nav-buttons button {
+            padding: 6px 8px;
+            font-size: 0.8em;
+        }
+    }
+   /* contact section */
+.contact-section {
+    background-color: #e6e6e6;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+}
+
+.n1, textarea {
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+} 
+
+button {
+    padding: 1rem;
+    background-color: #f0a500;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e68a00;
+}
+
+    

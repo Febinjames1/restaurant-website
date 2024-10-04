@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Febin's kitchen</title>
+    <!-- fontaswmoe cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- boxicons cdn -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- nav bar -->
+      <header id="header">
+           <div class="logo">
+            <a href="#"><img src="./images/Yellow_and_White_Minimalist_Kitchen_Logo-removebg-preview.png" alt="logo"></a>
+            </div>
+            <!-- checkbox for mobile menu -->
+             <input type="checkbox" id="checkbox">
+             <label for="checkbox" class="icons">
+                <i class='bx bx-menu' id="menuIcon"></i>
+             </label>
+             <nav class="navbar">
+                <a id="move"href="">Home</a>
+                <a id="move"href="banner">Menu</a>
+                <a id="move"href="">Offers</a>
+                <a id="move"href="">Reviews</a>
+                <a id="move"href="">Contact</a>
+             </nav>
+               <!-- Search Bar -->
+               <div class="search-bar">
+                <input  id="in" type="text" placeholder="Search Dishes" class="search-input" aria-label="Search restaurants">
+                <button class="search-btn" aria-label="Search Button">Search</button>
+            </div>
+            <div class="navactions">
+                <a href="#" class="sign-in-btn">SIGN IN</a>
+            </div>
+    <div class="user">
+        <i class='bx bx-shopping-bag' ></i>
+        <i class='bx bxs-user-circle' ></i>
+    </div>
+</header>
+<!-- food banner -->
+<section id="banner">
+    <div class="banner-content">
+        <h1>Welcome to Our Febin's kitchen </h1>
+        <p>Good Food, Great Vibes, Unforgettable Memories </p>
+        <button class="menu-button">View Menu</button>
+    </div>
+</section>
+<!-- rounded food list -->
+ <h2>Our Delicious Dishes</h2>
+<div class="gallery-container">
+<div class="image-gallery">
+ <div class="gallery-items">
+    <img src="./images/biriyani.avif" alt="dish1">
+ </div>
+ <div class="gallery-items">
+    <img src="./images/pizza1.avif" alt="dish1">
+ </div>
+ <div class="gallery-items">
+    <img src="./images/Parotta.avif" alt="dish1">
+ </div>
+ <div class="gallery-items">
+    <img src="./images/Shake.avif" alt="dish1">
+ </div>
+ <div class="gallery-items">
+    <img src="./images/rolls.avif" alt="dish1">
+ </div>
+ <div class="gallery-items">
+    <img src="./images/burger.avif" alt="dish1">
+ </div>
+ <div class="gallery-items">
+    <img src="./images/tea.avif" alt="dish1">
+ </div>
+     <div class="gallery-items">
+    <img src="./images/cake.avif" alt="dish1">
+ </div>
+ <div class="gallery-items">
+    <img src="./images/north indian.avif" alt="dish1">
+ </div>
+ <div class="gallery-items">
+    <img src="./images/south indian.avif" alt="dish1">
+ </div>
+ 
+ 
+ <div class="gallery-items">
+    <img src="./images/Noodles.avif" alt="dish1">
+ </div>
+ <div class="gallery-items">
+    <img src="./images/burgers.avif" alt="dish1">
+ </div>
+ <div class="gallery-items">
+    <img src="./images/Rolls1.avif" alt="dish1">
+ </div>
+ <div class="gallery-items">
+        <img src="./images/coffee.avif" alt="dish1">
+     </div>
+     
+ </div>
+</div>
+<!-- section online/offline -->
+<header >
+    <h1 >Febin's kitchen</h1>
+    <p id="review">4.3 <i class="fa-solid fa-star"></i>(1550+)</p>
+</header>
+<main class="division">
+    <div class="online-offline">
+        <img src="./images/order.jpeg" alt="">
+        <div ></div>
+            <h1>Order Online</h1>
+            <p> stay home and order your favorite food</p>
+ </div>
+      </div>
+    <div class="online-offline">
+        <img src="./images/dinning.jpeg" alt="">
+        <div>
+            <h1>Dinning</h1>
+            <p>view the city's dinnings</p>
+ </div>
+     </div>
+</main>
+<!-- FOOD list -->
+<header>
+<h2>Explore your favorite Dishes.</h2>
+
+</header>
+<main class="menu-grid">
+    <div class="menu-item">
+        <img src="./images/shawarma list.jpg" alt="">
+        <div class="item-info">
+            <p class="item-name">veg shawarma</p>
+            <p class="item-price">₹295.99 <button class="add-btn">+</button></p>
+            <span class="star"><i class="fa-solid fa-star"></i>4.2 • 35-40 mins</span>
+        </div>
+    </div>
+    <div class="menu-item">
+        <img src="./images/burger list.jpeg" alt="">
+        <div class="item-info">
+            <p class="item-name">Chicken Burgers</p>
+            <p class="item-price">₹129<button class="add-btn">+</button></p>
+            <span class="star"><i class="fa-solid fa-star"></i>4.2 • 45-50 mins</span>
+     </div>
+    </div>
+    <div class="menu-item">
+        <img src="./images/pizza list.jpeg" alt="">
+        <div class="item-info">
+            <p class="item-name">CMargherita Pizza</p>
+            <p class="item-price">₹169 <button class="add-btn">+</button></p>
+            <span class="star"><i class="fa-solid fa-star"></i>4.2 • 65-70 mins</span>
+          
+        </div>
+    </div>
+    <div class="menu-item">
+        <img src="./images/Chicken Kebab Plater.webp" alt="">
+        <div class="item-info">
+            <p class="item-name">Chicken Kebab Plater</p>
+            <p class="item-price">₹329.99 <button class="add-btn">+</button></p>
+            <span class="star"><i class="fa-solid fa-star"></i>4.2 • 60-70 mins</span>
+            <p class="offer">40%OFF UPTO ₹80</p>
+        </div>
+    </div>
+    <div class="menu-item">
+        <img src="./images/momos.avif" alt="">
+        <div class="item-info">
+            <p class="item-name">momos</p>
+            <p class="item-price">₹199 <button class="add-btn">+</button></p>
+            <span class="star"><i class="fa-solid fa-star"></i>4.2 • 35-40 mins</span>
+     </div>
+    </div>
+    <div class="menu-item">
+        <img src="./images/biriyani list.avif" alt="">
+        <div class="item-info">
+            <p class="item-name">biriyani</p>
+            <p class="item-price">₹150<button class="add-btn">+</button></p>
+            <span class="star"><i class="fa-solid fa-star"></i>4.2 • 45-50 mins</span>
+            <p class="offer">20%OFF UPTO ₹30</p>
+        </div>
+    </div>
+    <div class="menu-item">
+        <img src="./images/Dutch Truffle Cake (730 g).avif" alt="">
+        <div class="item-info">
+            <p class="item-name">Dutch Truffle Cake (730 g)</p>
+            <p class="item-price">₹745.99 <button class="add-btn">+</button></p>
+            <span class="star"><i class="fa-solid fa-star"></i>4.2 • 65-70 mins</span>
+        </div>
+    </div>
+    <div class="menu-item">
+        <img src="./images/Chilli Cheese Toast.avif" alt="">
+        <div class="item-info">
+            <p class="item-name">Chilli Cheese Toast</p>
+            <p class="item-price">₹195.99 <button class="add-btn">+</button></p>
+            <span class="star"><i class="fa-solid fa-star"></i>4.2 • 25-35 mins</span>
+            <p class="offer">30%OFF UPTO ₹40</p>
+    </div>
+    </div>
+    <div class="menu-item">
+        <img src="./images/Cold Devils Own.avif" alt="">
+        <div class="item-info">
+            <p class="item-name">Cold Devils Own</p>
+            <p class="item-price">₹255.99 <button class="add-btn">+</button></p>
+            <span class="star"><i class="fa-solid fa-star"></i>4.2 • 55-60 mins</span>
+            <p class="offer">40%OFF UPTO ₹50</p>
+    </div>
+    </div>
+    <div class="menu-item">
+        <img src="./images/Gourmet Belgian Cold Chocolate.avif" alt="">
+        <div class="item-info">
+            <p class="item-name">Gourmet Belgian Cold Chocolate</p>
+            <p class="item-price">₹135.99 <button class="add-btn">+</button></p>
+            <span class="star"><i class="fa-solid fa-star"></i>4.2 • 55-65 mins</span>
+     </div>
+    </div>
+    <div class="menu-item">
+       <img src="./images/pizza not'.jpeg" alt="">
+        <div class="item-info">
+            <p class="item-name">pizza</p>
+            <p class="item-price">Avaliable Soon </p>
+        </div>
+    </div>
+    <div class="menu-item">
+        <img src="./images/noodies not.jpeg" alt="">
+         <div class="item-info">
+             <p class="item-name">noodies</p>
+             <p class="item-price">Avaliable Soon </p>
+         </div>
+     
+    </div>
+
+</main>
+<section class="testimonials">
+    <h1>Client says about us</h1>
+    <div class="testimonial-container">
+        <div class="testimonial">
+            <img src="./images/review1.jpeg" alt="Louis Saville">
+            <h3>kiran.s</h3>
+            
+            <p>Food was awesome, porotta was fluffy and super soft, putt was nice tea was good in taste. . Staffs we're very friendly   ..</p>
+            <span class="quote">"</span>
+        </div>
+        <div class="testimonial">
+            <img src="./images/review2.jpeg" alt="Rekha Varadwaz">
+            <h3> Ajumal khan</h3>
+           
+            <p> asweome food .Have ample seating capacity. The atmosphere was good and pleasing one</p>
+            <span class="quote">"</span>
+        </div>
+        <div class="testimonial">
+            <img src="./images/review 3.jpeg" alt="Rekha Varadwaz">
+            <h3>Aslam niyas</h3>
+           
+            <p>The atmosphere was good and food is super worth for money</p>
+            <span class="quote">"</span>
+        </div>
+    </div>
+    <div class="nav-buttons">
+        <button>&#8249;</button>
+        <button>&#8250;</button>
+    </div>
+</section>
+
+   <!-- Contact Section -->
+   <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input class="n1"  type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input class="n1" type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+<!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-columns">
+
+                <!-- Column 1: About -->
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>We are a restaurant that prides itself on offering the finest culinary experiences with a focus on fresh, local ingredients and world-class service.</p>
+                    <p><strong>Phone:</strong> +1 123 456 7890</p>
+                    <p><strong>Email:</strong> info@restaurant.com</p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Reservations</a></li>
+                        <li><a href="#">Catering</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Newsletter -->
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates and promotions.</p>
+                    <form action="#" class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+                <!-- Column 4: Social Media -->
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Partner Logos -->
+            <div class="partners">
+                <img src="./images/silder/swiggy.png" alt="Paragon App" class="partner-logo">
+                <img src="./images/silder/trip.png" alt="Tripadvisor" class="partner-logo">
+                <img src="./images/silder/3.png" alt="Lonely Planet" class="partner-logo">
+                <img src="./images/silder/4.png" alt="Swiggy" class="partner-logo">
+                
+                
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Restaurant. All Rights Reserved. | Powered by febin's kitchen Solutions Inc.</p>
+                <p><a href="#">FACEBOOK</a> | <a href="#">INSTAGRAM</a> | <a href="#">LINKEDIN</a></p>
+            </div>
+        </div>
+    </footer>
+   
+</body>
+</html>
